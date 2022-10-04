@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const Post = require('./models/Post');
 
-const DB_CONNECTION = "mongodb+srv://dbuser_01:$lugyan77$@cluster0.kz00hur.mongodb.net/db_donor"; 
+const DB_CONNECTION = "mongodb+srv://:@cluster0.kz00hur.mongodb.net/db_donor"; 
 const PORT = 4000; 
 
 
