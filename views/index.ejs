@@ -1,0 +1,72 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blood Donor Details</title>
+
+        <style type="text/css">
+            .box1 {
+                background-color: white;
+                width: 20%;
+                height: 100%;
+                float: left;
+                opacity: 0.8;
+            }
+            .box2 {
+                background-color: white;
+                width: 60%;
+                height: 100%;
+                float: left; 
+                text-align: center; 
+            }
+            .box3 {
+                background-color: white;
+                width: 20%;
+                height: 100%;
+                float: right;
+                opacity: 0.8;
+            }
+            .highlight-text{
+                color: black;
+                font-size: 20px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="box1">
+            <p class="highlight-text">
+            </p>
+        </div>
+    
+        <div class="box2">
+            <div class="highlight-text">
+            <div class="w3-container">
+                
+                <div><br><h3>Details of Blood Donors in Yangon (Dummy Data)</h3><br>
+                -------------------------------------------------------------------------------------------------------------
+                <br><br>
+                <ul>
+                   <% postsList.forEach(posts => { %>
+                        <p><strong>Name:</strong> <%= posts.full_name %></p>
+                        <p><strong>D.O.B:</strong> <%= posts.d_o_b %></p>
+                        <p><strong>Blood Type:</strong> <%= posts.blood_type %></p>
+                        <p><strong>Mobile:</strong> <%= posts.mobile %></p>
+                        <p><strong>Township:</strong> <%= posts.township %></p>----------------------------------------------------------------
+                   <% }) %><br>
+        
+                </ul>
+                </div>
+
+            </div>
+            </div>
+        </div>
+        <div class="box3">
+            <p class="highlight-text">
+                
+            </p>
+        </div>
+    </body>
+    </html>

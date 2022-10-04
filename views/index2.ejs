@@ -1,0 +1,43 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blood Donor Details</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+
+    <body>
+                
+        <br>
+        <h3> <p style = "text-align:center"> Details of Blood Donors in Yangon (Dummy Data) </p> </h3>
+        <br><br>
+                
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">D.O.B</th>
+                    <th scope="col">Blood Type</th>
+                    <th scope="col">Mobile Number</th>
+                    <th scope="col">Township</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                <% postsList.forEach(posts => { %>
+                    <tr>
+                        <th scope="row"> <%= posts._id %>               </th>
+                        <td>             <%= posts.full_name  %>        </td>
+                        <td>             <%= posts.d_o_b %>             </td>
+                        <td>             <%= posts.blood_type %>        </td>
+                        <td>             <%= posts.mobile %>            </td>
+                        <td>             <%= posts.township %>          </td>
+                    </tr>
+                <% }) %>
+                </tbody>
+            </table>       
+    </body>
+    </html>

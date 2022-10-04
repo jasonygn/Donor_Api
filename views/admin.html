@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Data</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+</head>
+<body>
+    <h3><p style = "text-align:center">Adding Data to MongoDB</p></h3>
+    <form class="container" method="post" action="/">
+        <div class="form-group">
+            <h4>Name :</h4>
+            <input class="form-control" name="full_name">  
+        </div>
+        <div class="form-group">
+            <h4>D.O.B :</h4>
+            <input class="form-control" name="d_o_b">
+        </div>
+        <div class="form-group">
+            <h4>Blood Type :</h4>
+            <input class="form-control" name="blood_type">  
+        </div>
+        <div class="form-group">
+            <h4>Mobile Number :</h4>
+            <input class="form-control" name="mobile">
+        </div>
+        <div class="form-group">
+            <h4>Township :</h4>
+            <input class="form-control" name="township">  
+        </div>
+        <button><h5>Add Document</h5></button>
+    </form>
+    <br><br>
+        
+    <h3><p style = "text-align:center"> Deleting Data </p></h3>
+    <form class="container" method="post" action="/postId">
+        <div class="form-group">
+            <h4>Document ID :</h4>
+            <input class="form-control" name="delete" id="postId">    
+        </div>
+        <button><h5>Delete Document</h5></button>
+    </form>
+    <br><br><br>
+
+    <h3><p style = "text-align:center"> Updating Data </p></h3>
+    <form class="container" method="post" action="/">
+        <div class="form-group">
+            <h4>Document ID :</h4>
+            <input class="form-control" name="">  
+            <h4>Mobile Number (to be updated) :</h4>
+            <input class="form-control" name="mobile">   
+        </div>
+        <button><h5>Update Document</h5></button>
+    </form>
+    <br><br><br><br>
+
+
+</body>
+</html>
