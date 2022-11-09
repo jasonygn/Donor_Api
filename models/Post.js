@@ -1,8 +1,28 @@
 const mongoose = require('mongoose');
 
+const AddressSchema = mongoose.Schema({
+    street:{
+        type: String,
+        required: true
+    },
+    township: {
+        type: String,
+        required: true
+    },
+    city: {
+        type: String,
+        required: true
+    }
+});
+
 const PostSchema = mongoose.Schema({
+   
     full_name: {
         type: String,
+        required: true
+    },
+    is_male: {
+        type: Boolean,
         required: true
     },
     d_o_b: {
@@ -17,10 +37,24 @@ const PostSchema = mongoose.Schema({
         type: [String], 
         required: true
     },
-    township: {
+    email: {
         type: String,
-        required: false
+        required: true
+    },
+    address: {
+        type: AddressSchema,
+        required: true
+    },
+    createdAt: {
+        type: Date,
+        required: true,
+        default: Date.now
     }
+    
+    //timestamps: {
+    //    type: Date,
+    //    default: Date.now 
+    //}
 });
 
 module.exports = mongoose.model('Posts', PostSchema);

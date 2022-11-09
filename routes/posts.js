@@ -16,10 +16,13 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const post = new Post ({
         full_name: req.body.full_name,
+        is_male: req.body.is_male,
         d_o_b: req.body.d_o_b,
         blood_type: req.body.blood_type,
         mobile: req.body.mobile,
-        township: req.body.township
+        email: req.body.email,
+        address: req.body.address
+        
     });
     try {
     const savedPost = await post.save();
@@ -29,11 +32,23 @@ router.post('/', async (req, res) => {
     }
 });
 
-//search by ID (Postman)
-router.get('/:postId', async (req, res) => {
+
+// search by ID (Postman)
+//router.get('/:postId', async (req, res) => {
+//    try {
+//    const post = await Post.findById(req.params.postId);
+//    res.json(post);
+//    } catch(err) {
+//        res.json({ message: err }); 
+//    }
+//});
+
+
+// search by Blood Type (Postman)
+router.get('/:key', async (req, res) => {
     try {
-    const post = await Post.findById(req.params.postId);
-    res.json(post);
+    const searchPost = await Post.find({ blood_type: { $regex: req.params.key }}); 
+    res.json(searchPost);
     } catch(err) {
         res.json({ message: err }); 
     }
